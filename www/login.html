@@ -1,66 +1,58 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>home</title>
 <link href="css/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
 <link href="css/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
 <link href="css/grid.css" rel="stylesheet" type="text/css">
 <link href="css/swipe.css" rel="stylesheet" type="text/css">
 <link href="css/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link href="css/my-custom-theme.min.css" rel="stylesheet" type="text/css">
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="js/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
 <script src="js/swipe.js" type="text/javascript"></script>
 <script src="js/login.js" type="text/javascript"></script>
+<script src="js/remember.js" type="text/javascript"></script>
+<script src="js/vavidator.js" type="text/javascript"></script>
     <style type="text/css">
-      #loginForm { width: 350px; margin: 100px auto; }
+      #form-signin{ width: 350px; margin: 100px auto; }
       button[type] { margin: 0.5em 0; }
     </style>
+<meta charset="utf-8">
+<title>Login</title>
 </head>
 
 <body>
-<!-- login-->
 <div data-role="page" id="page">
-<div data-role="header" data-theme="b" data-position="fixed">
-    <h1>GetSmarter</h1>
+  <div data-role="header" data-theme="e" data-position="fixed">
+    <h1>Header</h1>
   </div>
   <div data-role="content">
  <div class="wrap">
-		<div class="avatar" align="center">
-      <img src="img/man.png">
-      <form action="" method="post" class="loginform" id="loginForm">
-                            <div class="field_text">
-                                <label for="email" class="label_title">Email:</label>
-                                <input name="log" type="text" autofocus required id="username" placeholder="Email" value="" Placeholder="Email" size="20" data-clear-btn="true"/>
-                                <span class="input_icon input_email"></span>
-                            </div>
-                            <div class="field_text">
-                                <label for="user_pass" class="label_title">Password:</label>
-                                <input type="password" name="pwd" id="password" value="" placeholder="Password" size="20" data-clear-btn="true"/>
-                                <span class="input_icon input_pass"></span>
-                            </div>
-                            <div class="rowRemember clearfix"></div>
-    <input type="submit" name="submit" id="submit" value="login" class="button positive"/>
-  </span></span></h2></div>
-                                <div class="forgetmenot input_styled checklist">
-                                    <div align="center"><label for="remember">Remember&nbsp;me?</label>
-<select name="remember" id="remember" data-role="slider">
-    <option value="off">Off</option>
-    <option value="on">On</option>
-</select> 
-</div>                               <span class="forget_password"><a href="#page1">Forgot Password?</a></span>
+   <div class="avatar" align="center">
+         <img src="img/man.png">
+		     <div class="container">
+            <form action="http://vle.getsmarter.co.za" method="post" class="form-signin"  id="form-signin" onsubmit="validateForm()">
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <input type="text" class="mail" placeholder="Email address" id='username' size="20" name="email">
+                <input type="password" class="input-block-level" placeholder="Password" id="pass" size="20">
+                <label class="checkbox">
+                    <input type="checkbox" value="remember-me" id="remember_me"> Remember me
+                </label>
+                <button class="ui-mini" type="submit" onclick="ValidateEmail(document.form-signin.email)">Sign in</button>
+            </form>
+        </div>             <span class="forget_password"><a href="#page1">Forgot <div class="forgetmenot input_styled checklist">
+          <span class="forget_password"><a href="forgot_password.php">Forgot Password?</a></span>
                                   </div>
                             <div class="rowSubmit"></div>
                         </form>
-                           </div>
-
-      </div>
-      </div>
-<div data-role="footer" data-theme="b" data-position="fixed">
-  <h2>GetSmarter &copy; 2014<span class="rowSubmit"><span class="btn btn-hover">
-
+                           </div> 
+</div>
+<div data-role="navbar"  data-position="fixed">
+  <div data-role="footer" data-theme="e">
+    <h4>Footer</h4>
   </div>
 </div>
-<!--login-->
+
+
 </body>
 </html>
