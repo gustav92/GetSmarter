@@ -1,1 +1,118 @@
 
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link href="css/grid.css" rel="stylesheet" type="text/css">
+<link href="css/swipe.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link href="css/my-custom-theme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+<script src="js/swipe.js" type="text/javascript"></script>
+<script src="js/login.js" type="text/javascript"></script>
+<script src="js/remember.js" type="text/javascript"></script>
+    <style type="text/css">
+      #details{ width: 350px; margin: 100px auto; }
+      button[type] { margin: 0.5em 0; }
+	  input[type] { margin: 0.5em 0; }
+	  
+    </style>
+<title>Profile</title>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+ <form id="details">
+        <legend>General:</legend>
+        <form>
+          <label for="file-1">Pic:</label>
+          <!-- Picture -->
+<div>
+<a href="#popupSydney" data-rel="popup" data-position-to="window" data-transition="fade" ><img class="popphoto" src="img/aboutP1.png" alt="Sydney, Australia" style="width:30%"></a
+
+<div data-role="popup" id="popupSydney" data-overlay-theme="a" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="img/aboutP1.png" style="max-height:512px;" alt="Sydney, Australia">
+</div>
+   <!-- Picture -->
+          <br>
+          <input type="file" data-clear-btn="true" name="file-1" id="file-1" value="">
+        </form>
+        <p>
+          <label>Name:</label>
+          <br>
+          <input type="text" data-clear-btn="true" value="" >
+          <br>
+          <label>Surname:</label>
+          <br>
+          <input type="text" data-clear-btn="true" value="">
+          <br>
+          <label>Email Address:</label>
+          <br>
+          <input type="text" value="" data-clear-btn="true" disabled="disabled">
+          <br>
+          <label for="number-l">CellPhone:</label>
+          <br>
+          <input type="text" data-clear-btn="true" pattern="[0-9]*" value=""name="number-l" value="" id="number-l">
+          <br>
+          <label for="tel-1">Telephone:</label>
+          <br>
+          <input type="tel" data-clear-btn="true" name="tel-1" value="" id="tel-1" pattern="[0-9]*">
+          <br>
+          <label>Address 1:</label>
+          <br>
+          <input type="text" value="">
+          <br>
+          <label>Address 2:</label>
+          <br>
+          <input type="text" data-clear-btn="true" value="">
+          <br>
+          <label>City/Town:</label>
+          <br>
+          <input type="text" data-clear-btn="true" value="">
+          <br>
+          <label>Province:</label>
+		  <fieldset class="ui-field-contain">
+        <select name="day" id="day" data-mini="true">
+          <option value="mon">Monday</option>
+          <option value="tue">Tuesday</option>
+          <option value="wed">Wednesday</option>
+          <option value="thu">Thursday</option>
+          <option value="fri">Friday</option>
+          <option value="sat">Saturday</option>
+          <option value="sun">Sunday</option>
+        </select>
+		</fieldset >
+          <br>
+          <label>Select a country:</label>
+          <br>
+  <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-gear ui-btn-icon-left">Choose a country</a>
+	    <div data-role="popup" id="myPopup">
+      <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Europe</li>
+        <li><a href="#">Norway</a></li>
+        <li><a href="#">Germany</a></li>
+        <li data-role="list-divider">Asia</li>
+        <li><a href="#">India</a></li>
+        <li><a href="#">Thailand</a></li>
+        <li data-role="list-divider">Africa</li>
+        <li><a href="#">Zimbabwe</a></li>
+        <li><a href="#">Uganda</a></li>
+    </ul>
+    </div>
+        <input type="button" value="Update Profile" align="middle" formaction="" id="#popupUndismissible" data-rel="popup" data-role="button" data-inline="true">
+      </form>
+  </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+</body>
+</html>
